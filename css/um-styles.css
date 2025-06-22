@@ -1,0 +1,167 @@
+/* Paleta de colores de la Universidad de Mendoza */
+
+:root {
+  /* Colores principales */
+  --um-azul-oscuro: #1a2f5a;  /* Azul oscuro - color principal del logo */
+  --um-blanco: #ffffff;       /* Blanco - color de contraste */
+  
+  /* Colores secundarios de la paleta */
+  --um-rojo: #8b2332;         /* Rojo burdeos */
+  --um-naranja: #e67e22;      /* Naranja */
+  --um-amarillo: #f1c40f;     /* Amarillo */
+  --um-morado: #8e44ad;       /* Morado */
+  --um-verde-oliva: #a49a5b;  /* Verde oliva */
+  --um-azul-claro: #5d8aa8;   /* Azul claro */
+  
+  /* Colores complementarios para el diseño */
+  --um-gris-claro: #f5f5f5;   /* Fondo claro */
+  --um-gris-medio: #e0e0e0;   /* Bordes y separadores */
+  --um-gris-oscuro: #333333;  /* Texto principal */
+  --um-gris-texto: #666666;   /* Texto secundario */
+  
+  /* Colores para estados y feedback */
+  --um-exito: #27ae60;        /* Verde para mensajes de éxito */
+  --um-alerta: #f39c12;       /* Amarillo para advertencias */
+  --um-error: #c0392b;        /* Rojo para errores */
+  --um-info: #3498db;         /* Azul para información */
+  
+  /* Sombras */
+  --um-sombra-suave: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --um-sombra-media: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --um-sombra-fuerte: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Tipografías */
+body {
+  font-family: 'Montserrat', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--um-gris-oscuro);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: var(--um-azul-oscuro);
+}
+
+/* Estilos para títulos */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para párrafos y texto */
+p {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: var(--um-azul-oscuro);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--um-naranja);
+  text-decoration: underline;
+}
+
+/* Clases de utilidad para colores */
+.bg-um-primary {
+  background-color: var(--um-azul-oscuro);
+  color: var(--um-blanco);
+}
+
+.bg-um-secondary {
+  background-color: var(--um-rojo);
+  color: var(--um-blanco);
+}
+
+.text-um-primary {
+  color: var(--um-azul-oscuro);
+}
+
+.text-um-secondary {
+  color: var(--um-rojo);
+}
+
+/* Botones */
+.btn-um-primary {
+  background-color: var(--um-azul-oscuro);
+  color: var(--um-blanco);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-um-primary:hover {
+  background-color: #15274a;
+  box-shadow: var(--um-sombra-suave);
+}
+
+.btn-um-secondary {
+  background-color: var(--um-rojo);
+  color: var(--um-blanco);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-um-secondary:hover {
+  background-color: #7a1f2c;
+  box-shadow: var(--um-sombra-suave);
+}
+
+/* Tarjetas */
+.card-um {
+  background-color: var(--um-blanco);
+  border-radius: 8px;
+  box-shadow: var(--um-sombra-suave);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-um:hover {
+  box-shadow: var(--um-sombra-media);
+}
+
+/* Bordes */
+.border-um {
+  border: 1px solid var(--um-gris-medio);
+}
+
+.border-um-primary {
+  border: 2px solid var(--um-azul-oscuro);
+}
+
+.border-um-secondary {
+  border: 2px solid var(--um-rojo);
+}

@@ -1,0 +1,129 @@
+/* Estilos adicionales para mejorar la accesibilidad */
+
+/* Mejoras de contraste y foco */
+:focus {
+  outline: 3px solid var(--um-rojo);
+  outline-offset: 2px;
+}
+
+/* Mejoras para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Mejoras para el chatbot */
+.chatbot-input input:focus {
+  border-color: var(--um-rojo);
+  box-shadow: 0 0 0 2px rgba(139, 35, 50, 0.25);
+}
+
+.chatbot-button {
+  position: relative;
+}
+
+.chatbot-button::after {
+  content: 'Asistente virtual';
+  position: absolute;
+  right: 70px;
+  background-color: var(--um-azul-oscuro);
+  color: var(--um-blanco);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.chatbot-button:hover::after {
+  opacity: 1;
+}
+
+/* Mejoras para formularios */
+input, select, textarea {
+  font-size: 16px; /* Evita zoom en dispositivos móviles */
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--um-gris-medio);
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--um-azul-oscuro);
+  box-shadow: 0 0 0 2px rgba(26, 47, 90, 0.25);
+}
+
+/* Mejoras para enlaces */
+a:focus-visible {
+  outline: 3px solid var(--um-rojo);
+  outline-offset: 2px;
+}
+
+/* Mejoras para botones */
+button {
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--um-rojo);
+  outline-offset: 2px;
+}
+
+/* Mejoras para la navegación con teclado */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--um-rojo);
+  color: var(--um-blanco);
+  padding: 8px;
+  z-index: 1001;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Mejoras para el modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+  .chatbot-messages .user .message-content {
+    background-color: #444;
+    color: #fff;
+  }
+}
+
+/* Mejoras para la accesibilidad en dispositivos móviles */
+@media (max-width: 768px) {
+  input, select, textarea, button {
+    padding: 12px; /* Áreas de toque más grandes */
+  }
+  
+  .chatbot-button {
+    width: 70px;
+    height: 70px;
+  }
+}

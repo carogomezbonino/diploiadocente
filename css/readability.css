@@ -1,0 +1,145 @@
+/* Estilos adicionales para mejorar la legibilidad con recuadros sombreados y gradientes */
+
+/* Recuadros destacados para información importante */
+.highlight-box {
+    background: linear-gradient(to right, rgba(0, 51, 102, 0.05), rgba(0, 51, 102, 0.1));
+    border-left: 4px solid #003366;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-box.primary {
+    background: linear-gradient(to right, rgba(0, 51, 102, 0.05), rgba(0, 51, 102, 0.1));
+    border-left-color: #003366;
+}
+
+.highlight-box.secondary {
+    background: linear-gradient(to right, rgba(153, 27, 30, 0.05), rgba(153, 27, 30, 0.1));
+    border-left-color: #991B1E;
+}
+
+.highlight-box.accent {
+    background: linear-gradient(to right, rgba(240, 124, 0, 0.05), rgba(240, 124, 0, 0.1));
+    border-left-color: #F07C00;
+}
+
+/* Títulos con gradiente sutil */
+.gradient-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.gradient-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #003366, #F07C00);
+}
+
+/* Tarjetas con sombreado para los espacios curriculares */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Recuadros para citas o información destacada */
+.quote-box {
+    background-color: rgba(240, 240, 240, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.quote-box::before {
+    content: '"';
+    font-family: Georgia, serif;
+    font-size: 60px;
+    color: rgba(0, 51, 102, 0.2);
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+
+/* Mejoras para la sección de preguntas frecuentes */
+.accordion-item {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+/* Mejoras para la sección de contacto */
+.contact-details .contact-item {
+    background-color: rgba(248, 249, 250, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-details .contact-item:hover {
+    transform: translateX(5px);
+    background-color: rgba(248, 249, 250, 0.9);
+}
+
+/* Mejoras para la legibilidad del texto principal */
+.section p {
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Recuadros para información clave */
+.key-info {
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.key-info h4 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+/* Mejoras para la navegación */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #003366, #F07C00);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
